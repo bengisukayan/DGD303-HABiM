@@ -7,9 +7,7 @@
 - [ ] Lighting and Effects
 - [ ] Menus and UI
 - [ ] Sound Integration
-- [ ] Respawning *
-- [ ] Save/Reload *
-- [ ] Movement
+- [X] Movement
 - [ ] Shooting
 - [ ] Melee Enemies
 - [ ] Ranged Enemies
@@ -17,3 +15,5 @@
 - [ ] Weapon/Loots
 - [ ] Basic Dialogue
 - [ ] Stamina *
+- [ ] Respawning *
+- [ ] Save/Reload *
