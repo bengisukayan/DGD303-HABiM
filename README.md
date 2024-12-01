@@ -4,7 +4,7 @@
 ### Progress
 - [ ] Map and Sprite Integration
 - [ ] Level Design
-- [ ] Lighting and PostProcessing
+- [ ] Lighting and Effects
 - [ ] Menus and UI
 - [ ] Sound Integration
 - [ ] Respawning
