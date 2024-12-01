@@ -15,3 +15,4 @@
 - [ ] Ranged Enemies
 - [ ] Wave System
 - [ ] Weapon/Loots
+- [ ] Basic Dialogue
