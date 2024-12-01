@@ -7,8 +7,8 @@
 - [ ] Lighting and Effects
 - [ ] Menus and UI
 - [ ] Sound Integration
-- [ ] Respawning
-- [ ] Save/Reload
+- [ ] Respawning *
+- [ ] Save/Reload *
 - [ ] Movement
 - [ ] Shooting
 - [ ] Melee Enemies
@@ -16,3 +16,4 @@
 - [ ] Wave System
 - [ ] Weapon/Loots
 - [ ] Basic Dialogue
+- [ ] Stamina *
