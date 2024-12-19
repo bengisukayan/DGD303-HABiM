@@ -2,12 +2,13 @@
 2.5D Shooter game in Unity.
 
 ### Progress
-- [ ] Map and Sprite Integration
+- [X] Map and Sprite Integration
 - [ ] Level Design
 - [ ] Lighting and Effects
 - [ ] Menus and UI
 - [ ] Sound Integration
 - [X] Movement
+- [X] Camera
 - [ ] Shooting
 - [ ] Melee Enemies
 - [ ] Ranged Enemies
