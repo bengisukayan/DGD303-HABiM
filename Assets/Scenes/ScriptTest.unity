@@ -1306,6 +1306,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1468600187}
+    - target: {fileID: 2398713436203716957, guid: 0c9c5d05d4ad8354c9c738d7dd0caa4e, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 329043504752403807, guid: e7e7ecddf99c21945888a2f1516456d7, type: 3}
     - target: {fileID: 4573697151144419560, guid: 0c9c5d05d4ad8354c9c738d7dd0caa4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.99
