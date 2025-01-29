@@ -7,7 +7,6 @@ public class Buttons : MonoBehaviour
 {
     public void Play()
     {
-        Score.health = 10;
         SceneManager.LoadScene("Game");
     }
 

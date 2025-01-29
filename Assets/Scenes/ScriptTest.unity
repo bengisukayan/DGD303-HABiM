@@ -179,6 +179,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0a0ee717460f7d45a62eb38881c9c69, type: 3}
+--- !u!95 &147971379 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8970428076598133842, guid: 0c9c5d05d4ad8354c9c738d7dd0caa4e, type: 3}
+  m_PrefabInstance: {fileID: 4681737476228069701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &232934290
 GameObject:
   m_ObjectHideFlags: 3
@@ -1307,9 +1312,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1468600187}
     - target: {fileID: 2398713436203716957, guid: 0c9c5d05d4ad8354c9c738d7dd0caa4e, type: 3}
-      propertyPath: projectile
+      propertyPath: animator
       value: 
-      objectReference: {fileID: 329043504752403807, guid: e7e7ecddf99c21945888a2f1516456d7, type: 3}
+      objectReference: {fileID: 147971379}
     - target: {fileID: 4573697151144419560, guid: 0c9c5d05d4ad8354c9c738d7dd0caa4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.99

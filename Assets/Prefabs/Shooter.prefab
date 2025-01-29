@@ -31,7 +31,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 7748307017628492296}
   m_Father: {fileID: 4573697151144419560}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4312021619467918230
@@ -147,10 +148,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4573697151144419560}
+  m_Father: {fileID: 4802052400719868155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1169390978073517243
 MeshFilter:
@@ -235,7 +236,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4802052400719868155}
-  - {fileID: 7748307017628492296}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &547190691305726092
@@ -284,12 +284,12 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   cooldown: 0.5
-  projectile: {fileID: 329043504752403807, guid: 74e985f57103528478c5cf3f448a9afc, type: 3}
+  projectile: {fileID: 329043504752403807, guid: e7e7ecddf99c21945888a2f1516456d7, type: 3}
   sightRange: 15
   attackRange: 4
   playerInSightRange: 0
   playerInAttackRange: 0
-  health: 2
+  health: 1
 --- !u!195 &3534476710156255215
 NavMeshAgent:
   m_ObjectHideFlags: 0

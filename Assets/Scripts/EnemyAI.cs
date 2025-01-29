@@ -8,6 +8,7 @@ public class EnemyAI : MonoBehaviour
     public NavMeshAgent agent;
     public Transform player;
     public LayerMask LayerGround, LayerPlayer;
+    public Animator animator;
 
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -43,6 +44,8 @@ public class EnemyAI : MonoBehaviour
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
         if (distanceToWalkPoint.magnitude < 1f) walkPointSet = false;
+
+        animator.SetBool("walking", agent.velocity.magnitude > 0.1f);
     }
 
     private void SearchWalkPoint() {
@@ -55,12 +58,14 @@ public class EnemyAI : MonoBehaviour
     
     private void Chase() {
         agent.SetDestination(player.position);
+        animator.SetBool("walking", agent.velocity.magnitude > 0.1f);
     }
 
     private void Attack() {
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
+        animator.SetBool("walking", false);
 
         if (!alreadyAttacked) {
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
