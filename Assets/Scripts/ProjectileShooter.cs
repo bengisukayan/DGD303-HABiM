@@ -24,6 +24,7 @@ public class ProjectileShooter : MonoBehaviour
         Vector3 shootDirection = new Vector3(normalizedX, 0f, normalizedZ).normalized;
 
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        Physics.IgnoreCollision(projectile.GetComponent<Collider>(), GetComponent<Collider>());
 
         projectile.transform.forward = shootDirection;
 

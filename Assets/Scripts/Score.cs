@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    public static int currentMoney = 0;
-    public static int lives=3;
+    public static int health = 10;
 }

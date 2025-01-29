@@ -10,8 +10,7 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private bool _walking;
     public Animator animator;
-
-
+    public float health = 10f;
     void Start()
     {
         rigidBody = gameObject.GetComponent<Rigidbody>();
@@ -48,5 +47,15 @@ public class PlayerController : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
+    }
+
+    public void TakeDamage(int damage) {
+        health -= damage;
+        if (health <= 0) Die();
+    }
+
+    private void Die() {
+        Destroy(gameObject);
+        //sceneManager.LoadScene("GameOver");
     }
 }

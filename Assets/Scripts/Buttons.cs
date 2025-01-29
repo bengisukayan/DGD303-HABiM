@@ -7,8 +7,8 @@ public class Buttons : MonoBehaviour
 {
     public void Play()
     {
-        Score.lives = 3;
-        SceneManager.LoadScene("Start");
+        Score.health = 10;
+        SceneManager.LoadScene("Game");
     }
 
     public void Credits()
