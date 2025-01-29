@@ -7,10 +7,12 @@ public class Bullet : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<PlayerController>().TakeDamage(1);
+            Destroy(gameObject);
         }
-        if (other.CompareTag("Enemy"))
+        else if (other.CompareTag("Enemy"))
         {
             other.GetComponent<EnemyAI>().TakeDamage(1);
+            Destroy(gameObject);
         }
     }
 }

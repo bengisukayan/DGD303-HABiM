@@ -3,8 +3,7 @@ using UnityEngine;
 public class ProjectileShooter : MonoBehaviour
 {
     public GameObject projectilePrefab;
-    public float projectileSpeed = 10f;
-
+    public float projectileSpeed = 20f;
 
     void Update()
     {
@@ -22,12 +21,12 @@ public class ProjectileShooter : MonoBehaviour
         float normalizedZ = mousePosition.y / Screen.height * 2f - 1f;
 
         Vector3 shootDirection = new Vector3(normalizedX, 0f, normalizedZ).normalized;
+        Vector3 spawnPosition = new Vector3(transform.position.x, 0.5f, transform.position.z);
 
-        GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-        Physics.IgnoreCollision(projectile.GetComponent<Collider>(), GetComponent<Collider>());
-
+        GameObject projectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
         projectile.transform.forward = shootDirection;
 
+        Physics.IgnoreCollision(projectile.GetComponent<Collider>(), GameObject.FindWithTag("Player")?.GetComponent<Collider>());
         Rigidbody rigidBody = projectile.GetComponent<Rigidbody>();
         if (rigidBody != null)
         {
