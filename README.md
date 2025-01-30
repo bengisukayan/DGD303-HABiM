@@ -3,10 +3,9 @@
 
 ### Progress
 - [X] Map and Sprite Integration
-- [ ] Level Design
-- [ ] Lighting and Effects
+- [X] Level Design
 - [X] Menus and UI
-- [ ] Sound Integration
+- [X] Sound Integration
 - [X] Movement
 - [X] Camera
 - [X] Shooting
