@@ -14,7 +14,7 @@
 - [X] Ranged Enemies
 - [ ] Wave System
 - [ ] Weapon/Loots
-- [ ] Basic Dialogue
+- [X] Basic Dialogue
 - [ ] Stamina *
 - [ ] Respawning *
 - [ ] Save/Reload *
