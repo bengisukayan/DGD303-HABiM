@@ -12,9 +12,6 @@
 - [X] Shooting
 - [X] Melee Enemies
 - [X] Ranged Enemies
-- [ ] Wave System
-- [ ] Weapon/Loots
+- [X] Wave System
 - [X] Basic Dialogue
-- [ ] Stamina *
-- [ ] Respawning *
-- [ ] Save/Reload *
+- [ ] Checkpoints
