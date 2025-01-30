@@ -19,5 +19,9 @@ public class Bullet : MonoBehaviour
             other.GetComponent<PuncherAI>().TakeDamage(1);
             Destroy(gameObject);
         }
+        else if (other.CompareTag("Floor"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class WaveSpawner : MonoBehaviour
 
     private int currentWave = 0;
     private bool isSpawning = false;
+    private bool isCleared = false;
+    public bool isLast = false;
 
     private void Start()
     {
@@ -27,7 +30,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isSpawning)
+        if (other.CompareTag("Player") && !isSpawning && !isCleared)
         {
             StartCoroutine(SpawnWaves());
         }
@@ -59,7 +62,8 @@ public class WaveSpawner : MonoBehaviour
         FindObjectOfType<AudioManager>().PlayBackgroundMusic();
         waveTextPanel.SetActive(false);
         waveWalls.SetActive(false);
-        gameObject.SetActive(false);
+        isCleared = true;
+        if (isLast) SceneManager.LoadScene("YouWon");
     }
 
     private void SpawnEnemy()

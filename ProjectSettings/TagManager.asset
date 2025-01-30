@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Puncher
   - Shooter
+  - Floor
   layers:
   - Default
   - TransparentFX

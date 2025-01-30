@@ -300,7 +300,7 @@ MonoBehaviour:
   - "Sar\u0131\u015F\u0131n, you are back!"
   - Come on, you should defeat this punks already.
   - Here, let me kiss you.
-  wordSpeed: 0.05
+  wordSpeed: 0.3
   isSpecial: 0
   _newBullet: {fileID: 329043504752403807, guid: 4b42aaa3ae63b3945bf174adc80cdb2b, type: 3}
   one: {fileID: 0}

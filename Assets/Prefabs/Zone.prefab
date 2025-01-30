@@ -265,6 +265,7 @@ MonoBehaviour:
   waveText: {fileID: 0}
   waveTextPanel: {fileID: 0}
   waveWalls: {fileID: 8859016106712810177}
+  isLast: 0
 --- !u!1 &2437644635372779257
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,8 +292,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -30.501059, y: 10.060924, z: 11.747556}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3079524878989973994}
   - {fileID: 4949322560499300759}
@@ -408,14 +409,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4248522118558269890}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2588191, y: -0, z: -0, w: 0.9659258}
-  m_LocalPosition: {x: 11.501059, y: -5.590924, z: 0.062444687}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 11.501059, y: -0.92, z: 1.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7532956895743836488}
   m_Father: {fileID: 8018243388952630486}
-  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!114 &3246929872786570678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,7 +611,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2604826349082477739}
   - {fileID: 5493595681707065985}
