@@ -59,6 +59,7 @@ public class WaveSpawner : MonoBehaviour
         FindObjectOfType<AudioManager>().PlayBackgroundMusic();
         waveTextPanel.SetActive(false);
         waveWalls.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     private void SpawnEnemy()
