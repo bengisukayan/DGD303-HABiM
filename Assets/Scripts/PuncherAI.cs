@@ -93,6 +93,7 @@ public class PuncherAI : MonoBehaviour
     }
 
     private void Die() {
+        FindObjectOfType<AudioManager>().PlayMonsterDeath();
         Destroy(gameObject);
     }
 }

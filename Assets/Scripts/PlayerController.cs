@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Checkpoint(Transform transform) {
+        FindObjectOfType<AudioManager>().PlayCheckpoint();
         checkPoint = transform;
     }
 
@@ -98,6 +99,7 @@ public class PlayerController : MonoBehaviour
 
     private void Respawn()
     {
+        FindObjectOfType<AudioManager>().PlayRespawn();
         Heal();
         if (checkPoint != null)
         {

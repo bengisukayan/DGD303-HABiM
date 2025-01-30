@@ -39,6 +39,7 @@ public class WaveSpawner : MonoBehaviour
 
         for (currentWave = 1; currentWave <= totalWaves; currentWave++)
         {
+            FindObjectOfType<AudioManager>().PlayWaveMusic(currentWave);
             waveText.text = "Wave " + currentWave;
             int enemyCount = baseEnemiesPerWave + (currentWave * 2);
 
@@ -53,6 +54,7 @@ public class WaveSpawner : MonoBehaviour
 
         waveText.text = "Waves Completed!";
         yield return new WaitForSeconds(3f);
+        FindObjectOfType<AudioManager>().PlayBackgroundMusic();
         waveTextPanel.SetActive(false);
     }
 
