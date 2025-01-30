@@ -26,7 +26,7 @@ public class ProjectileShooter : MonoBehaviour
         GameObject projectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
         projectile.transform.forward = shootDirection;
 
-        Physics.IgnoreCollision(projectile.GetComponent<Collider>(), GameObject.FindWithTag("Player")?.GetComponent<Collider>());
+        Physics.IgnoreCollision(projectile.GetComponent<Collider>(), GetComponent<Collider>());
         Rigidbody rigidBody = projectile.GetComponent<Rigidbody>();
         if (rigidBody != null)
         {

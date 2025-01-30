@@ -13,6 +13,7 @@ public class NPC : MonoBehaviour
 
     public float wordSpeed;
     private bool _playerIsClose;
+    public bool isSpecial = false;
 
     private PlayerController _playerHealth;
 
@@ -71,6 +72,10 @@ public class NPC : MonoBehaviour
             ZeroText();
             _index = 0;
             RefillPlayerHealth();
+            if (isSpecial) 
+            {
+                //change the bullet
+            }
         }
     }
 

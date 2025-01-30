@@ -25,4 +25,9 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
 
+    public void Continue()
+    {
+        //Disable menu
+    }
+
 }
