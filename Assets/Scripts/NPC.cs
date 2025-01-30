@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class NPC : MonoBehaviour
     private PlayerController _player;
     private ProjectileShooter _playerShooter;
     public GameObject _newBullet;
+    public GameObject one;
+    public GameObject three;
 
     private bool _hasTalked = false;
 
@@ -95,6 +98,8 @@ public class NPC : MonoBehaviour
         if (isSpecial)
         {
             _playerShooter.projectilePrefab = _newBullet;
+            one.SetActive(false);
+            three.SetActive(true);
         }
 
         _hasTalked = true;
