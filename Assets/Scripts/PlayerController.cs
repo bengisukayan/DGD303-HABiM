@@ -14,8 +14,13 @@ public class PlayerController : MonoBehaviour
 
     public float maxHealth = 20f;
     public float health = 20f;
-    public float stars = 3f;
     public UnityEngine.UI.Image healthBar;
+
+    public float stars = 3f;
+    public GameObject starsUI;
+
+    public Transform checkPoint;
+
     void Start()
     {
         rigidBody = gameObject.GetComponent<Rigidbody>();
@@ -65,13 +70,42 @@ public class PlayerController : MonoBehaviour
         healthBar.fillAmount = maxHealth;
     }
 
+    public void Checkpoint(Transform transform) {
+        checkPoint = transform;
+    }
+
     private void Die() {
         stars--;
-        //eksilt yıldız ve checkpoint
+        switch(stars)
+        {
+            case 2:
+                starsUI.transform.GetChild(2).gameObject.SetActive(false);
+                Respawn();
+                break;
+            case 1:
+                starsUI.transform.GetChild(2).gameObject.SetActive(false);
+                starsUI.transform.GetChild(1).gameObject.SetActive(false);
+                Respawn();
+                break;
+            default:
+                break;
+        }
         if (stars == 0) {
             Destroy(gameObject);
             SceneManager.LoadScene("GameOver");
         }
+    }
 
+    private void Respawn()
+    {
+        Heal();
+        if (checkPoint != null)
+        {
+            transform.position = checkPoint.position + new Vector3(2, 0, 0);
+        }
+        else
+        {
+            transform.position = new Vector3(0, 0, 0);
+        }
     }
 }

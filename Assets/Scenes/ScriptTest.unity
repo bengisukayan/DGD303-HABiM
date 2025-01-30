@@ -186,9 +186,9 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7769661835381429438, guid: a0a0ee717460f7d45a62eb38881c9c69, type: 3}
-      propertyPath: health
-      value: 20
-      objectReference: {fileID: 0}
+      propertyPath: starsUI
+      value: 
+      objectReference: {fileID: 702128569}
     - target: {fileID: 7769661835381429438, guid: a0a0ee717460f7d45a62eb38881c9c69, type: 3}
       propertyPath: healthBar
       value: 
@@ -863,6 +863,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1865980511}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &702128569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4734385158008163569, guid: bf9c13ed9dd3265449ba3625981a26e4, type: 3}
+  m_PrefabInstance: {fileID: 5084289699370676936}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &780185178 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6003821084968712767, guid: bf9c13ed9dd3265449ba3625981a26e4, type: 3}
