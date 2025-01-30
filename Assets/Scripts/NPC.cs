@@ -1,9 +1,11 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
 {
+    [Header("Dialogue Settings")]
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
     public string[] dialogue;
@@ -15,10 +17,23 @@ public class NPC : MonoBehaviour
     private bool _playerIsClose;
     public bool isSpecial = false;
 
-    private PlayerController _playerHealth;
+    private PlayerController _player;
+    private ProjectileShooter _playerShooter;
+    public GameObject _newBullet;
+    public GameObject one;
+    public GameObject three;
 
-    void Update()
+    private bool _hasTalked = false;
+
+    private void Start()
     {
+        _hasTalked = PlayerPrefs.GetInt(gameObject.name + "_talked", 0) == 1;
+    }
+
+    private void Update()
+    {
+        if (_hasTalked) return;
+
         if (Input.GetKeyDown(KeyCode.E) && _playerIsClose)
         {
             if (dialoguePanel.activeInHierarchy && _canSkip)
@@ -38,13 +53,13 @@ public class NPC : MonoBehaviour
         }
     }
 
-    public void ZeroText()
+    private void ZeroText()
     {
         dialogueText.text = "";
         dialoguePanel.SetActive(false);
     }
 
-    IEnumerator Typing()
+    private IEnumerator Typing()
     {
         dialogueText.text = "";
         foreach (char letter in dialogue[_index].ToCharArray())
@@ -54,7 +69,7 @@ public class NPC : MonoBehaviour
         }
     }
 
-    public void NextLine()
+    private void NextLine()
     {
         _canSkip = false;
         if (_index < dialogue.Length - 1)
@@ -69,22 +84,34 @@ public class NPC : MonoBehaviour
         }
         else
         {
-            ZeroText();
-            _index = 0;
-            RefillPlayerHealth();
-            if (isSpecial) 
-            {
-                //change the bullet
-            }
+            FinishDialogue();
         }
+    }
+
+    private void FinishDialogue()
+    {
+        ZeroText();
+        _index = 0;
+        RefillPlayerHealth();
+        SetCheckpoint();
+
+        if (isSpecial)
+        {
+            _playerShooter.projectilePrefab = _newBullet;
+            one.SetActive(false);
+            three.SetActive(true);
+        }
+
+        _hasTalked = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !_hasTalked)
         {
             _playerIsClose = true;
-            _playerHealth = other.GetComponent<PlayerController>();
+            _player = other.GetComponent<PlayerController>();
+            _playerShooter = other.GetComponent<ProjectileShooter>();
         }
     }
 
@@ -103,6 +130,11 @@ public class NPC : MonoBehaviour
 
     private void RefillPlayerHealth()
     {
-        _playerHealth.Heal();
+        _player?.Heal();
+    }
+
+    private void SetCheckpoint()
+    {
+        _player?.Checkpoint(gameObject.transform);
     }
 }

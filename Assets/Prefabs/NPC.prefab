@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5938911500944795800}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.115, z: 0.2}
+  m_LocalPosition: {x: 0, y: -0.115, z: 0.12}
   m_LocalScale: {x: 1, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3118154807775188355}
   - component: {fileID: 2634912105460801088}
   - component: {fileID: 8671055823291724816}
+  - component: {fileID: 860320133800217009}
   m_Layer: 0
   m_Name: Noodle
   m_TagString: Untagged
@@ -189,7 +190,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.45999137
+  m_Radius: 0.4
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -214,6 +215,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &860320133800217009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5984447557022767631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3080bbe154740f348b200a68672c2c9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8464703236776461299
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,3 +301,7 @@ MonoBehaviour:
   - Here is a gift
   - Don't stick around
   wordSpeed: 0.05
+  isSpecial: 1
+  _newBullet: {fileID: 329043504752403807, guid: 4b42aaa3ae63b3945bf174adc80cdb2b, type: 3}
+  one: {fileID: 0}
+  three: {fileID: 0}

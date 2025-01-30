@@ -5,7 +5,7 @@
 - [X] Map and Sprite Integration
 - [ ] Level Design
 - [ ] Lighting and Effects
-- [ ] Menus and UI
+- [X] Menus and UI
 - [ ] Sound Integration
 - [X] Movement
 - [X] Camera
@@ -13,5 +13,6 @@
 - [X] Melee Enemies
 - [X] Ranged Enemies
 - [X] Wave System
+- [X] Weapon Upgrade
 - [X] Basic Dialogue
-- [ ] Checkpoints
+- [X] Checkpoints

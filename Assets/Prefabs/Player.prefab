@@ -189,7 +189,11 @@ MonoBehaviour:
   rigidBody: {fileID: 2628625960747239642}
   spriteRenderer: {fileID: 5669739785470247491}
   animator: {fileID: 3644118247264082215}
-  health: 10
+  maxHealth: 20
+  health: 20
+  stars: 3
+  starsUI: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!114 &2799726187410935328
 MonoBehaviour:
   m_ObjectHideFlags: 0

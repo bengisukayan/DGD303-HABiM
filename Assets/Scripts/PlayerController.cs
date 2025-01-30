@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,7 +11,16 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private bool _walking;
     public Animator animator;
-    public float health = 10f;
+
+    public float maxHealth = 20f;
+    public float health = 20f;
+    public UnityEngine.UI.Image healthBar;
+
+    public float stars = 3f;
+    public GameObject starsUI;
+
+    public Transform checkPoint;
+
     void Start()
     {
         rigidBody = gameObject.GetComponent<Rigidbody>();
@@ -51,15 +61,51 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage) {
         health -= damage;
+        healthBar.fillAmount = health / maxHealth;
         if (health <= 0) Die();
     }
 
     public void Heal() {
-        health = 10f;
+        health = maxHealth;
+        healthBar.fillAmount = maxHealth;
+    }
+
+    public void Checkpoint(Transform transform) {
+        checkPoint = transform;
     }
 
     private void Die() {
-        Destroy(gameObject);
-        //sceneManager.LoadScene("GameOver");
+        stars--;
+        switch(stars)
+        {
+            case 2:
+                starsUI.transform.GetChild(2).gameObject.SetActive(false);
+                Respawn();
+                break;
+            case 1:
+                starsUI.transform.GetChild(2).gameObject.SetActive(false);
+                starsUI.transform.GetChild(1).gameObject.SetActive(false);
+                Respawn();
+                break;
+            default:
+                break;
+        }
+        if (stars == 0) {
+            Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
+        }
+    }
+
+    private void Respawn()
+    {
+        Heal();
+        if (checkPoint != null)
+        {
+            transform.position = checkPoint.position + new Vector3(2, 0, 0);
+        }
+        else
+        {
+            transform.position = new Vector3(0, 0, 0);
+        }
     }
 }
