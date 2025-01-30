@@ -15,6 +15,7 @@ public class WaveSpawner : MonoBehaviour
 
     public TextMeshProUGUI waveText;
     public GameObject waveTextPanel;
+    public GameObject waveWalls;
 
     private int currentWave = 0;
     private bool isSpawning = false;
@@ -36,6 +37,7 @@ public class WaveSpawner : MonoBehaviour
     {
         isSpawning = true;
         waveTextPanel.SetActive(true);
+        waveWalls.SetActive(true);
 
         for (currentWave = 1; currentWave <= totalWaves; currentWave++)
         {
@@ -56,6 +58,7 @@ public class WaveSpawner : MonoBehaviour
         yield return new WaitForSeconds(3f);
         FindObjectOfType<AudioManager>().PlayBackgroundMusic();
         waveTextPanel.SetActive(false);
+        waveWalls.SetActive(false);
     }
 
     private void SpawnEnemy()

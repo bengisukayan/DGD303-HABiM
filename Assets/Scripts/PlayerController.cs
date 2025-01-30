@@ -100,6 +100,7 @@ public class PlayerController : MonoBehaviour
     private void Respawn()
     {
         FindObjectOfType<AudioManager>().PlayRespawn();
+        FindObjectOfType<AudioManager>().PlayBackgroundMusic();
         Heal();
         if (checkPoint != null)
         {

@@ -16,7 +16,7 @@ public class PuncherAI : MonoBehaviour
 
     public float cooldown;
     bool alreadyAttacked;
-    public float attackDamage = 5f;
+    public bool isSpecial;
 
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
@@ -79,7 +79,8 @@ public class PuncherAI : MonoBehaviour
     private void DealDamage() {
         if (player != null && playerInAttackRange) {
             PlayerController playerHealth = player.GetComponent<PlayerController>();
-            playerHealth.TakeDamage(1);
+            if (isSpecial) playerHealth.TakeDamage(3);
+            else playerHealth.TakeDamage(1);
         }
     }
 
