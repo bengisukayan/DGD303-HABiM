@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 6752259282492541562}
   - component: {fileID: 5268611289656029527}
   - component: {fileID: 4611856051730912836}
-  - component: {fileID: 5864341104939730328}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5864341104939730328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3896856353373761071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88b969c376ffba7418a7c4ae4ee40ced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 329043504752403807, guid: 74e985f57103528478c5cf3f448a9afc, type: 3}
-  projectileSpeed: 10
 --- !u!1 &4301845936262912972
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +95,8 @@ GameObject:
   - component: {fileID: 2628625960747239642}
   - component: {fileID: 5113067547365786079}
   - component: {fileID: 7769661835381429438}
-  m_Layer: 0
+  - component: {fileID: 2799726187410935328}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -203,6 +189,21 @@ MonoBehaviour:
   rigidBody: {fileID: 2628625960747239642}
   spriteRenderer: {fileID: 5669739785470247491}
   animator: {fileID: 3644118247264082215}
+  health: 10
+--- !u!114 &2799726187410935328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4301845936262912972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b969c376ffba7418a7c4ae4ee40ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 329043504752403807, guid: 74e985f57103528478c5cf3f448a9afc, type: 3}
+  projectileSpeed: 20
 --- !u!1 &8527213775451313811
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +216,7 @@ GameObject:
   - component: {fileID: 5669739785470247491}
   - component: {fileID: 3644118247264082215}
   - component: {fileID: 9015264797038656730}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Sar\u0131\u015F\u0131n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

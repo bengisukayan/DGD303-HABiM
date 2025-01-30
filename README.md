@@ -9,12 +9,9 @@
 - [ ] Sound Integration
 - [X] Movement
 - [X] Camera
-- [ ] Shooting
-- [ ] Melee Enemies
-- [ ] Ranged Enemies
-- [ ] Wave System
-- [ ] Weapon/Loots
-- [ ] Basic Dialogue
-- [ ] Stamina *
-- [ ] Respawning *
-- [ ] Save/Reload *
+- [X] Shooting
+- [X] Melee Enemies
+- [X] Ranged Enemies
+- [X] Wave System
+- [X] Basic Dialogue
+- [ ] Checkpoints

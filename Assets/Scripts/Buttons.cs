@@ -7,8 +7,7 @@ public class Buttons : MonoBehaviour
 {
     public void Play()
     {
-        Score.lives = 3;
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("Game");
     }
 
     public void Credits()
@@ -24,6 +23,11 @@ public class Buttons : MonoBehaviour
     public void Title()
     {
         SceneManager.LoadScene("Main");
+    }
+
+    public void Continue()
+    {
+        //Disable menu
     }
 
 }

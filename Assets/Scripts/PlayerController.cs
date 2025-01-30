@@ -10,8 +10,7 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private bool _walking;
     public Animator animator;
-
-
+    public float health = 10f;
     void Start()
     {
         rigidBody = gameObject.GetComponent<Rigidbody>();
@@ -35,7 +34,7 @@ public class PlayerController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 moveDir = new(moveHorizontal, 0, moveVertical);
-        rigidBody.velocity = moveDir * speed;
+        rigidBody.velocity  = moveDir * speed;
         
         _walking = moveHorizontal != 0 || moveVertical != 0;
         animator.SetBool("walking", _walking);
@@ -48,5 +47,19 @@ public class PlayerController : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
+    }
+
+    public void TakeDamage(int damage) {
+        health -= damage;
+        if (health <= 0) Die();
+    }
+
+    public void Heal() {
+        health = 10f;
+    }
+
+    private void Die() {
+        Destroy(gameObject);
+        //sceneManager.LoadScene("GameOver");
     }
 }
