@@ -9,9 +9,9 @@
 - [ ] Sound Integration
 - [X] Movement
 - [X] Camera
-- [ ] Shooting
-- [ ] Melee Enemies
-- [ ] Ranged Enemies
+- [X] Shooting
+- [X] Melee Enemies
+- [X] Ranged Enemies
 - [ ] Wave System
 - [ ] Weapon/Loots
 - [ ] Basic Dialogue
