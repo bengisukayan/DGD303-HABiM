@@ -54,6 +54,10 @@ public class PlayerController : MonoBehaviour
         if (health <= 0) Die();
     }
 
+    public void Heal() {
+        health = 10f;
+    }
+
     private void Die() {
         Destroy(gameObject);
         //sceneManager.LoadScene("GameOver");
