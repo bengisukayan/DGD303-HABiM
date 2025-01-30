@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,7 +11,11 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private bool _walking;
     public Animator animator;
-    public float health = 10f;
+
+    public float maxHealth = 20f;
+    public float health = 20f;
+    public float stars = 3f;
+    public UnityEngine.UI.Image healthBar;
     void Start()
     {
         rigidBody = gameObject.GetComponent<Rigidbody>();
@@ -51,15 +56,22 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage) {
         health -= damage;
+        healthBar.fillAmount = health / maxHealth;
         if (health <= 0) Die();
     }
 
     public void Heal() {
-        health = 10f;
+        health = maxHealth;
+        healthBar.fillAmount = maxHealth;
     }
 
     private void Die() {
-        Destroy(gameObject);
-        //sceneManager.LoadScene("GameOver");
+        stars--;
+        //eksilt yıldız ve checkpoint
+        if (stars == 0) {
+            Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
+        }
+
     }
 }
