@@ -23,6 +23,7 @@ public class ProjectileShooter : MonoBehaviour
         Vector3 shootDirection = new Vector3(normalizedX, 0f, normalizedZ).normalized;
         Vector3 spawnPosition = new Vector3(transform.position.x, 0.5f, transform.position.z);
 
+        FindObjectOfType<AudioManager>().PlayShooting();
         GameObject projectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
         projectile.transform.forward = shootDirection;
 
