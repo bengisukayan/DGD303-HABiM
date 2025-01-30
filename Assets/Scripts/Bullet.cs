@@ -9,9 +9,14 @@ public class Bullet : MonoBehaviour
             other.GetComponent<PlayerController>().TakeDamage(1);
             Destroy(gameObject);
         }
-        else if (other.CompareTag("Enemy"))
+        else if (other.CompareTag("Shooter"))
         {
-            other.GetComponent<EnemyAI>().TakeDamage(1);
+            other.GetComponent<ShooterAI>().TakeDamage(1);
+            Destroy(gameObject);
+        }
+        else if (other.CompareTag("Puncher"))
+        {
+            other.GetComponent<PuncherAI>().TakeDamage(1);
             Destroy(gameObject);
         }
     }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8970428076598133842}
   - component: {fileID: 7819270339102730972}
   m_Layer: 0
-  m_Name: ShooterBody
+  m_Name: PuncherBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 207862769, guid: d97c87f95f5a85b4b8478adfadc3470d, type: 3}
+  m_Sprite: {fileID: -560338413, guid: d97c87f95f5a85b4b8478adfadc3470d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 1188755972179375105}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 49fb918ae57b5da4b9d6fc67e3fb628f, type: 2}
+  m_Controller: {fileID: 9100000, guid: ce79bbaaff8aece4793e8fa744b77663, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -213,11 +213,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4573697151144419560}
   - component: {fileID: 547190691305726092}
-  - component: {fileID: 2398713436203716957}
+  - component: {fileID: 4758504494936123590}
   - component: {fileID: 3534476710156255215}
   m_Layer: 0
-  m_Name: Shooter
-  m_TagString: Shooter
+  m_Name: Puncher
+  m_TagString: Puncher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,7 +261,7 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2398713436203716957
+--- !u!114 &4758504494936123590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7899251292113777325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b419685d1f3a9d64b84248c21252e748, type: 3}
+  m_Script: {fileID: 11500000, guid: bdcd3771ce2084e458bda18eb1718869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 3534476710156255215}
@@ -284,10 +284,10 @@ MonoBehaviour:
   animator: {fileID: 8970428076598133842}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  cooldown: 0.5
-  projectile: {fileID: 329043504752403807, guid: e7e7ecddf99c21945888a2f1516456d7, type: 3}
+  cooldown: 1
+  attackDamage: 5
   sightRange: 15
-  attackRange: 4
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
   health: 1

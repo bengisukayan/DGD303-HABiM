@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
+  - Puncher
+  - Shooter
   layers:
   - Default
   - TransparentFX

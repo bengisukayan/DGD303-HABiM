@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 moveDir = new(moveHorizontal, 0, moveVertical);
-        rigidBody.velocity = moveDir * speed;
+        rigidBody.velocity  = moveDir * speed;
         
         _walking = moveHorizontal != 0 || moveVertical != 0;
         animator.SetBool("walking", _walking);
