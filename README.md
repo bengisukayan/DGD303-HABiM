@@ -2,7 +2,7 @@
 2.5D Shooter game in Unity.
 
 ### Executable Link
-https://drive.google.com/file/d/17HRPM1cI9FFKN2mdR8pSeV53MIFORv4c/view
+https://drive.google.com/file/d/1CEDxGqig8gk0fhgZpvFICt5Aj1Rs_Jmi/view?usp=sharing
 
 ### Walkthrough
 * Make sure to speak with purple aliens by pressing 'E' to fill your health and save your progress
